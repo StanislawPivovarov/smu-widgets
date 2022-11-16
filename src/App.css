@@ -1,0 +1,10 @@
+@import url('/node_modules/antd/dist/antd.css');
+@font-face {
+  font-family: 'OpenSansSemibold';
+  src: local('OpenSansSemibold'),
+  url('./assets/fonts/OpenSansSemibold.woff') format ('woff'),
+};
+
+body {
+font-family: "OpenSansSemibold", serif;
+}
