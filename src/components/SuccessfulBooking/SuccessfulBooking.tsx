@@ -1,5 +1,5 @@
 import { Row, Col, Button, Divider, Popover, Alert, Modal, Radio } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ContentWrapper } from "../../styles/Negative";
 import { FileOutlined, ExclamationCircleFilled } from "@ant-design/icons";
 import {
@@ -28,16 +28,17 @@ function SuccessfulBooking() {
   };
 
   const hide = () => {
-    setOpen(false); //
+    setOpen(false);
   };
 
   const handleOpenChange = (newOpen: boolean) => {
-    setOpen(newOpen); // popover
+    setOpen(newOpen);
   };
+
 
   return (
     <div style={{ height: "300px" }}>
-        <Navigation/>
+      <Navigation />
       <Divider />
       <Row justify="center">
         <Col span={24}>
@@ -77,7 +78,9 @@ function SuccessfulBooking() {
                   open={open}
                   onOpenChange={handleOpenChange}
                 >
-                  <Modal
+                    <Button type="default">Отменить бронирование</Button>
+                </Popover>
+                <Modal
                     title="Ваше семейное положение"
                     open={isModalOpen}
                     onOk={handleOk}
@@ -88,8 +91,7 @@ function SuccessfulBooking() {
                       <Radio>Нет супруга (супруги)</Radio>
                     </RadioButtons>
                   </Modal>
-                  <Button type="default">Отменить бронирование</Button>
-                </Popover>
+                  
               </Col>
               <Col span={"30%"}>
                 <Button type="primary" onClick={showModal}>
@@ -113,7 +115,6 @@ function SuccessfulBooking() {
         </Col>
       </Row>
       <Divider />
-      
     </div>
   );
 }

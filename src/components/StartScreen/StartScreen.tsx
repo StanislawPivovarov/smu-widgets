@@ -43,28 +43,28 @@ function StartScreen() {
       <Modal centered width={680} cancelButtonProps={{style: { display: 'none' }}} okText = "Отправить" title="Бронирования объекта" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} okButtonProps={{style: { display: 'flex' }}}>
       <Form layout="vertical" autoComplete="off">
         <p>Заполните реквизиты, которые будут использованы для формирования договора бронирования объекта. </p>
-        <Form.Item name="fio" style={{ maxWidth: '460px' }} required={true} label="ФИО">
+        <Form.Item name="fio" style={{ maxWidth: '460px' }} rules={[{ required: true }]} label="ФИО">
           <Input />
         </Form.Item>
-        <Form.Item name="snils" style={{ maxWidth: '170px' }} required={true} label="Снилс">
+        <Form.Item name="snils" style={{ maxWidth: '170px' }} rules={[{ required: true }]} label="Снилс">
           <Input />
         </Form.Item>
-        <Form.Item name="passport-serie" style={{ maxWidth: '170px' }} required={true} label="Серия паспорта">
+        <Form.Item name="passport-serie" style={{ maxWidth: '170px' }} rules={[{ required: true }]} label="Серия паспорта">
           <Input />
         </Form.Item>
-        <Form.Item name="passport-number" style={{ maxWidth: '170px' }} required={true} label="Номер паспорта">
+        <Form.Item name="passport-number" style={{ maxWidth: '170px' }} rules={[{ required: true }]} label="Номер паспорта">
           <Input />
         </Form.Item>
-        <Form.Item name="passport-date" style={{ maxWidth: '460px' }} required={true} label="Дата выдачи">
+        <Form.Item name="passport-date" style={{ maxWidth: '460px' }} rules={[{ required: true }]} label="Дата выдачи">
         <DatePicker defaultValue={moment('2020/11/02', dateFormat)} format={dateFormat} />
         </Form.Item>
-        <Form.Item name="passport-issued" style={{ maxWidth: '460px' }} required={true} label="Кем выдан">
+        <Form.Item name="passport-issued" style={{ maxWidth: '460px' }} rules={[{ required: true }]} label="Кем выдан">
           <Input />
         </Form.Item>
-        <Form.Item name="mobile-phone" style={{ maxWidth: '460px' }} required={true} label="Телефон">
+        <Form.Item name="mobile-phone" style={{ maxWidth: '460px' }} rules={[{ required: true }]} label="Телефон">
           <Input />
         </Form.Item>
-        <Form.Item name="email" style={{ maxWidth: '460px' }} required={true} label="E-mail">
+        <Form.Item name="email" style={{ maxWidth: '460px' }} rules={[{ required: true }]} label="E-mail">
           <Input />
         </Form.Item>
       </Form>

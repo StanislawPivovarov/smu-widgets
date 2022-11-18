@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import { Nav } from "../../styles/Navigation";
 function Navigation() {
   return (
@@ -20,3 +20,4 @@ function Navigation() {
 }
 
 export default Navigation;
+

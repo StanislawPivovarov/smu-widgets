@@ -1,9 +1,9 @@
 import React from 'react';
-import StartScreen from './components/StartScreen/StartScreen';
+import StartScreen from './components/StartScreen';
 import ContractSign from './components/ContractSign';
 import SubscriptionWaiting from './components/SubscriptionWaiting';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Pay from './components/Pay';
 import Negative from './components/Negative/Negative';
 import NegativeRented from './components/NegativeRented';
@@ -16,9 +16,10 @@ import Final from './components/Final';
 function App() {
   return (
     <div className="App">
+      
     <Router>
       <Routes>
-        <Route path='' element = {<StartScreen/>} />
+        <Route path='/' element = {<StartScreen/>} />
         <Route path='/contract' element = {<ContractSign/>} />
         <Route path='/subscription' element ={<SubscriptionWaiting/>}/>
         <Route path='/pay' element ={<Pay/>}/>
