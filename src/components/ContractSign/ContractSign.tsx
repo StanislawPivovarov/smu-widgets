@@ -1,6 +1,6 @@
 import { Button, Checkbox, Col, Divider, Row } from "antd";
 import { VerticalAlignBottomOutlined } from "@ant-design/icons";
-import React from "react";
+import React, { useState } from "react";
 import googleplay from "../../assets/imgs/en_get.svg";
 import applestore from "../../assets/imgs/Download_on_the_App_Store_Badge_RU_RGB_blk_100317.svg";
 import huaweistore from "../../assets/imgs/huawei_app gallery.png";
@@ -17,7 +17,19 @@ import {
   UlList,
 } from "../../styles/ContractSign";
 import Navigation from "../Navigation";
+import { CheckboxChangeEvent } from "antd/lib/checkbox";
 function ContractSign() {
+  const [disabled, setDisabled] = useState(true);
+
+
+  const handleChange = (e: CheckboxChangeEvent) =>{
+    if(e.target.checked){
+      setDisabled(false)
+    } else{
+      setDisabled(true)
+    }
+  }
+
   return (
     <div>
       <Navigation />
@@ -55,7 +67,7 @@ function ContractSign() {
                 Смартфон с NFC-модулем
               </ContentList>
             </UlList>
-            <GosKeyLink href="#" className="goskey">
+            <GosKeyLink href="https://www.gosuslugi.ru/goskey" target="_blank" className="goskey">
               Что такое Госключ?
             </GosKeyLink>
             <UlList>
@@ -95,9 +107,9 @@ function ContractSign() {
               <a className="link-to-download">Скачать договор</a>
             </Download>
             <div>
-              <Checkbox>Договор прочитал, согласен, готов подписать</Checkbox>
+              <Checkbox onChange={handleChange}>Договор прочитал, согласен, готов подписать</Checkbox>
               <br />
-              <Button style={{ marginTop: "20px" }} type="primary">
+              <Button disabled={disabled} style={{ marginTop: "20px" }} type="primary">
                 Отправить договор в Госключ
               </Button>
             </div>
