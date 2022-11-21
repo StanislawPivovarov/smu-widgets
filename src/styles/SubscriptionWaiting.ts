@@ -8,6 +8,7 @@ export const ContentWrapper = styled.div`
     height: 250px;
     margin: 0 auto;
     justify-content: space-between;
+    padding: 0 16px;
 `
 
 export const Subheader = styled.p`

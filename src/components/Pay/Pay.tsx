@@ -6,7 +6,9 @@ import {
   ButtonsDownload,
   ContentWrapper,
   DownloadParagraph,
+  IconVisability,
   PayHeader,
+  Slash,
 } from "../../styles/Pay";
 import Navigation from "../Navigation";
 
@@ -43,8 +45,16 @@ function Pay() {
                   </DownloadParagraph>
                 </ButtonsDownload>
               </a>
-              <p>&#160; / &#160;</p>
-              <a href="">ваша подпись</a>
+              <Slash>&#160; &#160; / &#160;</Slash>
+              <a href="" className="download-contract">
+                <ButtonsDownload className="button-filling">
+                  <IconVisability>
+                    <VerticalAlignBottomOutlined size={16} />
+                  </IconVisability>
+
+                  <DownloadParagraph>Ваша подпись</DownloadParagraph>
+                </ButtonsDownload>
+              </a>
             </Buttons>
             <Button type="primary">Оплатить</Button>
           </ContentWrapper>

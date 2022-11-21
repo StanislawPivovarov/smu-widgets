@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
 export const AppsLinks = styled.div`
-display: flex;
-flex-direction: row;
+display: grid;
+grid-template-columns: 25% 25% 25% 25%;
 justify-content: space-between;
+@media(max-width: 768px){
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    row-gap: 15px;
+}
 `
 
 export const Store = styled.img`
@@ -44,4 +49,7 @@ align-items: center;
 
 export const ContentWrapper = styled.div`
 max-width: 600px;
+display: block;
+margin: 0 auto;
+padding: 0 16px;
 `

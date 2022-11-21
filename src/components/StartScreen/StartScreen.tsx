@@ -69,7 +69,6 @@ function StartScreen() {
         </Form.Item>
       </Form>
       </Modal>
-      <Divider/>
     </div>
   );
 }

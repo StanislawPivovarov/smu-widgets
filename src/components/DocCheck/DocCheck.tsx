@@ -1,6 +1,6 @@
 import { Divider, Row, Col, Checkbox, Button } from "antd";
 import React from "react";
-import { Header } from "../../styles/ContractSign";
+import { ContentWrapper, Header } from "../../styles/ContractSign";
 import { VerticalAlignBottomOutlined } from "@ant-design/icons";
 import { LinkList, LinkText } from "../../styles/DocCheck";
 import Navigation from "../Navigation";
@@ -11,7 +11,8 @@ function DocCheck() {
       <Navigation />
       <Divider />
       <Row justify="center">
-        <Col flex="600px">
+        <Col span={24}>
+          <ContentWrapper>
           <Header>Проверка документов</Header>
           <p>1. Проверьте сформированный ДДУ и Акт</p>
           <p>
@@ -39,6 +40,8 @@ function DocCheck() {
           <Button type="primary" style={{ marginTop: "22px" }}>
             Отправить документы в Госключ
           </Button>
+          </ContentWrapper>
+         
         </Col>
       </Row>
       <Divider />

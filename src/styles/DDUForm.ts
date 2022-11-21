@@ -4,6 +4,9 @@ export const HeaderForm = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+@media(max-width: 768px){
+    flex-direction: column;
+}
 `
 
 export const Header = styled.h1`

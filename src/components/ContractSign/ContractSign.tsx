@@ -1,10 +1,10 @@
 import { Button, Checkbox, Col, Divider, Row } from "antd";
 import { VerticalAlignBottomOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
-import googleplay from "../../assets/imgs/en_get.svg";
-import applestore from "../../assets/imgs/Download_on_the_App_Store_Badge_RU_RGB_blk_100317.svg";
-import huaweistore from "../../assets/imgs/huawei_app gallery.png";
-import rustore from "../../assets/imgs/56f11dfd41cf8f54615960b6fec67c09.png";
+import googleplay from "../../assets/imgs/googlePlay-black.svg";
+import applestore from "../../assets/imgs/appStore-black.svg";
+import huaweistore from "../../assets/imgs/appGallery-black.svg";
+import rustore from "../../assets/imgs/rustore-black.svg";
 import {
   AppsLinks,
   Content,
@@ -35,7 +35,7 @@ function ContractSign() {
       <Navigation />
       <Divider />
       <Row justify="center">
-        <Col span={7}>
+        <Col span={24}>
           <ContentWrapper>
             <Header className="header">Подписание договора</Header>
             <Content className="content">

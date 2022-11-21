@@ -4,9 +4,12 @@ import { ContentWrapper } from "../../styles/Negative";
 import { FileOutlined, ExclamationCircleFilled } from "@ant-design/icons";
 import {
   ButtonsBlock,
+  ButtonWrapper,
   Header,
   IconLink,
+  IconVisability,
   RadioButtons,
+  Slash,
 } from "../../styles/SuccessfulBooking";
 import { LinkIcon, Links } from "../../styles/SuccessfulBooking";
 import Navigation from "../Navigation";
@@ -78,13 +81,18 @@ function SuccessfulBooking() {
                   open={open}
                   onOpenChange={handleOpenChange}
                 >
-                    <Button type="default">Отменить бронирование</Button>
+                    
                 </Popover>
                 <Modal
                     title="Ваше семейное положение"
                     open={isModalOpen}
                     onOk={handleOk}
                     onCancel={handleCancel}
+                    footer={[
+                      <Button type="primary" style={{display: "flex"}}>
+                        Сформировать
+                      </Button>
+                    ]}
                   >
                     <RadioButtons>
                       <Radio>Есть супруг (супруга)</Radio>
@@ -93,23 +101,43 @@ function SuccessfulBooking() {
                   </Modal>
                   
               </Col>
-              <Col span={"30%"}>
+              
+                
+            </Row>
+            <ButtonWrapper>
+            <Button type="default">Отменить бронирование</Button>
                 <Button type="primary" onClick={showModal}>
                   Сформировать ДДУ
                 </Button>
-              </Col>
-            </Row>
+            </ButtonWrapper>
+            
             <Links className="">
               <a href="">
                 <LinkIcon>
                   <FileOutlined size={16} />
-                  <IconLink className="">Акт бронирования</IconLink>
+                  <IconLink className="icon-link">Акт бронирования</IconLink>
                 </LinkIcon>
               </a>
-              <p>&#160; / &#160;</p>
-              <a href="">ваша подпись</a>
-              <p>&#160; / &#160;</p>
-              <a href="">подпись застройщика</a>
+              <Slash>&#160; / &#160;</Slash>
+              <a href="">
+                <LinkIcon>
+                <IconVisability>
+                <FileOutlined size={16} />
+                </IconVisability>
+                  
+                  <IconLink className="icon-link">Ваша подпись</IconLink>
+                </LinkIcon>
+              </a>
+              <Slash>&#160; / &#160;</Slash>
+              <a href="">
+                <LinkIcon>
+                <IconVisability>
+                <FileOutlined size={16} />
+                </IconVisability>
+                  
+                  <IconLink className="icon-link">Подпись застройщика</IconLink>
+                </LinkIcon>
+              </a>
             </Links>
           </ContentWrapper>
         </Col>

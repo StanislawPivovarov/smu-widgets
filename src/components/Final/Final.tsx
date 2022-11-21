@@ -1,9 +1,10 @@
 import { Divider, Row, Col, Alert } from "antd";
 import React from "react";
-import { Header } from "../../styles/Final";
-import { Buttons, ButtonsDownload, DownloadParagraph } from "../../styles/Pay";
+import { Dividervisability, Header, IconVisability } from "../../styles/Final";
+import { Buttons, ButtonsDownload, DownloadParagraph, Slash } from "../../styles/Pay";
 import { FileOutlined } from "@ant-design/icons";
 import Navigation from "../Navigation";
+import { ContentWrapper } from "../../styles/ContractSign";
 
 function Final() {
   return (
@@ -11,7 +12,8 @@ function Final() {
       <Navigation />
       <Divider />
       <Row justify="center">
-        <Col flex="600px">
+        <Col span={24}>
+          <ContentWrapper>
           <Alert
             style={{ height: "56px", border: "none" }}
             message="Документы успешно подписаны"
@@ -29,11 +31,30 @@ function Final() {
                 <DownloadParagraph>Акт бронирования</DownloadParagraph>
               </ButtonsDownload>
             </a>
-            <p>&#160; / &#160;</p>
-            <a href="">ваша подпись</a>
-            <p>&#160; / &#160;</p>
-            <a href="">подпись застройщика</a>
+            <Slash>&#160; &#160;/ &#160;</Slash>
+            <a href="" className="download-contract">
+              
+              <ButtonsDownload className="button-filling">
+              <IconVisability>
+              <FileOutlined size={16} />
+                </IconVisability>
+                
+                <DownloadParagraph>Ваша подпись</DownloadParagraph>
+              </ButtonsDownload>
+            </a>
+            <Slash>&#160; &#160;/ &#160;</Slash>
+            <a href="" className="download-contract">
+              <ButtonsDownload className="button-filling">
+              <IconVisability>
+              <FileOutlined size={16} />
+                </IconVisability>
+                <DownloadParagraph>Подпись застройщика</DownloadParagraph>
+              </ButtonsDownload>
+            </a>
           </Buttons>
+          <Dividervisability>
+          <Divider/>
+          </Dividervisability>
           <Buttons style={{ marginBottom: "0" }} className="buttons">
             <a href="" className="download-contract">
               <ButtonsDownload className="button-filling">
@@ -41,11 +62,29 @@ function Final() {
                 <DownloadParagraph>Договор бронирования</DownloadParagraph>
               </ButtonsDownload>
             </a>
-            <p>&#160; / &#160;</p>
-            <a href="">ваша подпись</a>
-            <p>&#160; / &#160;</p>
-            <a href="">подпись застройщика</a>
+            <Slash>&#160; &#160; / &#160;</Slash>
+            <a href="" className="download-contract">
+              <ButtonsDownload className="button-filling">
+              <IconVisability>
+              <FileOutlined size={16} />
+                </IconVisability>
+                <DownloadParagraph>Ваша подпись</DownloadParagraph>
+              </ButtonsDownload>
+            </a>
+            <Slash>&#160; &#160; / &#160;</Slash>
+            <a href="" className="download-contract">
+              <ButtonsDownload className="button-filling">
+              <IconVisability>
+              <FileOutlined size={16} />
+                </IconVisability>
+                <DownloadParagraph>Подпись застройщика</DownloadParagraph>
+              </ButtonsDownload>
+            </a>
           </Buttons>
+          <Dividervisability>
+          <Divider/>
+          </Dividervisability>
+          
           <Buttons style={{ marginBottom: "0" }} className="buttons">
             <a href="" className="download-contract">
               <ButtonsDownload className="button-filling">
@@ -53,11 +92,30 @@ function Final() {
                 <DownloadParagraph>Договор долевого участия</DownloadParagraph>
               </ButtonsDownload>
             </a>
-            <p>&#160; / &#160;</p>
-            <a href="">ваша подпись</a>
-            <p>&#160; / &#160;</p>
-            <a href="">подпись застройщика</a>
+            <Slash>&#160; &#160;/ &#160;</Slash>
+            <a href="" className="download-contract">
+              <ButtonsDownload className="button-filling">
+              <IconVisability>
+              <FileOutlined size={16} />
+                </IconVisability>
+                <DownloadParagraph>Ваша подпись</DownloadParagraph>
+              </ButtonsDownload>
+            </a>
+            <Slash>&#160; &#160;/ &#160;</Slash>
+            <a href="" className="download-contract">
+              <ButtonsDownload className="button-filling">
+              <IconVisability>
+              <FileOutlined size={16} />
+                </IconVisability>
+                <DownloadParagraph>Подпись застройщика</DownloadParagraph>
+              </ButtonsDownload>
+            </a>
           </Buttons>
+          <Dividervisability>
+          <Divider/>
+          </Dividervisability>
+          </ContentWrapper>
+         
         </Col>
       </Row>
       <Divider />

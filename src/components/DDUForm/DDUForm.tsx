@@ -1,6 +1,7 @@
 import { Button, Col, DatePicker, Divider, Form, Input, Row } from "antd";
 import moment from "moment";
 import React from "react";
+import { ContentWrapper } from "../../styles/ContractSign";
 import { Header, HeaderText, FormFilling } from "../../styles/DDUForm";
 import { HeaderForm } from "../../styles/DDUForm";
 import Navigation from "../Navigation";
@@ -11,6 +12,7 @@ function DDUForm() {
     <div>
       <Navigation />
       <Divider />
+      <ContentWrapper>
       <Row justify="center">
         <Col flex={"600px"}>
           <HeaderForm>
@@ -22,6 +24,7 @@ function DDUForm() {
       </Row>
       <Row justify="center">
             <Col flex={"600px"}>
+              
             <Form style={{border: "1px solid #D9D9D9", marginTop: "12px"}} layout="vertical" autoComplete="off">
             <Form.Item>
                 <Header>Данные для формирования ДДУ</Header>
@@ -63,6 +66,8 @@ function DDUForm() {
                 </Button>
             </Col>
         </Row>
+      </ContentWrapper>
+      
       
       <Divider />
     </div>
