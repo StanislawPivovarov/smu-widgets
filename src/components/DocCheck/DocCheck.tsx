@@ -1,10 +1,10 @@
 import { Divider, Row, Col, Checkbox, Button } from "antd";
 import React from "react";
-import { ContentWrapper, Header } from "../../styles/ContractSign";
+import {Header} from "../../styles/ContractSign";
 import { VerticalAlignBottomOutlined } from "@ant-design/icons";
 import { LinkList, LinkText } from "../../styles/DocCheck";
 import Navigation from "../Navigation";
-
+import {ContentWrapper} from "../../styles/Helpers"
 function DocCheck() {
   return (
     <div>

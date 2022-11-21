@@ -9,13 +9,13 @@ import {
   AppsLinks,
   Content,
   ContentList,
-  ContentWrapper,
   Download,
   GosKeyLink,
   Header,
   Store,
   UlList,
 } from "../../styles/ContractSign";
+import {ContentWrapper} from "../../styles/Helpers"
 import Navigation from "../Navigation";
 import { CheckboxChangeEvent } from "antd/lib/checkbox";
 function ContractSign() {

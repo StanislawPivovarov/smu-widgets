@@ -1,6 +1,6 @@
 import { Alert, Col, Divider, Row } from "antd";
 import React from "react";
-import { ContentWrapper } from "../../styles/Negative";
+import {ContentWrapper} from "../../styles/Helpers"
 import Navigation from "../Navigation";
 function Negative(){
     return(

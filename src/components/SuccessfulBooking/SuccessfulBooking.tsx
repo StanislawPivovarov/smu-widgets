@@ -1,7 +1,7 @@
 import { Row, Col, Button, Divider, Popover, Alert, Modal, Radio } from "antd";
 import React, { useEffect, useState } from "react";
 import { ContentWrapper } from "../../styles/Negative";
-import { FileOutlined, ExclamationCircleFilled } from "@ant-design/icons";
+import { FileOutlined } from "@ant-design/icons";
 import {
   ButtonsBlock,
   ButtonWrapper,

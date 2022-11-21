@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Button, Divider, Modal, Form, Input, InputNumber, DatePicker } from "antd";
+import { Row, Col, Button, Divider, Modal, Form, Input, DatePicker } from "antd";
 import { ButtonContainer, Info } from "../../styles/StartScreen";
 import moment from 'moment';
 import Navigation from "../Navigation";

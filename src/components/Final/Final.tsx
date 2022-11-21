@@ -4,7 +4,7 @@ import { Dividervisability, Header, IconVisability } from "../../styles/Final";
 import { Buttons, ButtonsDownload, DownloadParagraph, Slash } from "../../styles/Pay";
 import { FileOutlined } from "@ant-design/icons";
 import Navigation from "../Navigation";
-import { ContentWrapper } from "../../styles/ContractSign";
+import {ContentWrapper} from "../../styles/Helpers"
 
 function Final() {
   return (

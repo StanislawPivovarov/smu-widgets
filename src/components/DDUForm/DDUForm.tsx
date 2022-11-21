@@ -1,7 +1,7 @@
 import { Button, Col, DatePicker, Divider, Form, Input, Row } from "antd";
 import moment from "moment";
 import React from "react";
-import { ContentWrapper } from "../../styles/ContractSign";
+import {ContentWrapper} from "../../styles/Helpers"
 import { Header, HeaderText, FormFilling } from "../../styles/DDUForm";
 import { HeaderForm } from "../../styles/DDUForm";
 import Navigation from "../Navigation";
