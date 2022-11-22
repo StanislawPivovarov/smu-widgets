@@ -9,7 +9,7 @@ justify-content: space-between;
 }
 `
 
-export const Header = styled.h1`
+export const FormHeader = styled.h1`
 font-size: 16px;
 padding: 8px 12px;
 border-bottom: 1px solid #D9D9D9;

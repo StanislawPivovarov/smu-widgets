@@ -11,13 +11,8 @@ justify-content: space-between;
 }
 `
 
-export const Store = styled.img`
-width: 128px;
-height: 36px;
-`
-
-export const Header = styled.h1`
-font-size: 16px;
+export const AppStore = styled.img`
+width: 100%
 `
 
 export const Content = styled.p`

@@ -1,18 +1,16 @@
 import { Divider, Row, Col, Checkbox, Button } from "antd";
 import React from "react";
-import {Header} from "../../styles/ContractSign";
+import { Header } from "../../styles/Helpers";
 import { VerticalAlignBottomOutlined } from "@ant-design/icons";
 import { LinkList, LinkText } from "../../styles/DocCheck";
 import Navigation from "../Navigation";
-import {ContentWrapper} from "../../styles/Helpers"
 function DocCheck() {
   return (
     <div>
       <Navigation />
       <Divider />
       <Row justify="center">
-        <Col span={24}>
-          <ContentWrapper>
+        <Col span={23} style={{ maxWidth: "600px" }}>
           <Header>Проверка документов</Header>
           <p>1. Проверьте сформированный ДДУ и Акт</p>
           <p>
@@ -23,16 +21,16 @@ function DocCheck() {
           <a href="">Что такое Госключ?</a>
           <LinkList>
             <div>
-              <a href="">
+              <Button type="link" href="">
                 <VerticalAlignBottomOutlined color="1890FF" />
                 <LinkText className="link-to-download">Скачать ДДУ</LinkText>
-              </a>
+              </Button>
             </div>
             <div style={{ marginTop: "12px" }}>
-              <a href="">
+              <Button type="link" href="">
                 <VerticalAlignBottomOutlined color="1890FF" />
                 <LinkText className="link-to-download">Скачать АКТ</LinkText>
-              </a>
+              </Button>
             </div>
           </LinkList>
           <Checkbox>Я проверил документы</Checkbox>
@@ -40,8 +38,6 @@ function DocCheck() {
           <Button type="primary" style={{ marginTop: "22px" }}>
             Отправить документы в Госключ
           </Button>
-          </ContentWrapper>
-         
         </Col>
       </Row>
       <Divider />
